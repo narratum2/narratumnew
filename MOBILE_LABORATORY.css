@@ -1,0 +1,534 @@
+/* ========================================
+   MOBILE DESIGN LABORATORY
+   iPhone-quality touch experience
+   ======================================== */
+
+/* ===== MOBILE-FIRST FOUNDATION ===== 
+   Designed for one-handed use, thumb-optimized */
+@media (max-width: 768px) {
+    
+    /* Perfect reading line length - never too wide */
+    body {
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+    
+    /* Generous comfortable sections */
+    .section {
+        padding: 60px 0;
+        min-height: auto;
+    }
+    
+    /* Perfect content width for mobile reading */
+    .content-container {
+        padding: 0 20px;
+        max-width: 100%;
+    }
+    
+    /* ===== HERO - MOBILE OPTIMIZED ===== 
+       Like opening a beautiful app */
+    .hero {
+        min-height: 85vh;
+        padding: 100px 24px 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .hero-title {
+        font-size: 48px !important;
+        line-height: 1.1;
+        margin-bottom: 24px;
+        letter-spacing: -0.02em;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 100%;
+        margin-bottom: 32px;
+    }
+    
+    /* ===== TYPOGRAPHY - MOBILE PERFECTED ===== 
+       Readable at arm's length */
+    .section-title {
+        font-size: 36px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        letter-spacing: -0.01em;
+    }
+    
+    .section-subtitle {
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 1.75;
+        margin-bottom: 1.4em;
+    }
+    
+    /* ===== TOUCH TARGETS - APPLE STANDARD ===== 
+       Minimum 44×44pt for comfortable tapping */
+    button,
+    .btn,
+    a,
+    .nav-dot,
+    .mood-dot,
+    .symbol-item,
+    input,
+    textarea {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Buttons - thumb-friendly size and position */
+    button,
+    .btn {
+        padding: 16px 28px;
+        font-size: 16px;
+        border-radius: 14px;
+        font-weight: 500;
+    }
+    
+    /* ===== NAVIGATION - MOBILE FLOATING ===== 
+       Like iOS navigation, always accessible */
+    .anchor-menu {
+        top: 20px;
+        padding: 10px 16px;
+        gap: 20px;
+        backdrop-filter: blur(20px) saturate(180%);
+        background: rgba(10, 21, 32, 0.85);
+        border: 0.5px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5),
+                    0 0 1px rgba(255, 255, 255, 0.1);
+    }
+    
+    .anchor-link {
+        font-size: 13px;
+        padding: 8px 4px;
+        letter-spacing: 0.5px;
+    }
+    
+    /* ===== RIGHT NAV DOTS - MOBILE OPTIMIZED ===== 
+       Positioned for right thumb reach */
+    .nav-dots {
+        right: 16px;
+        padding: 12px 8px;
+        gap: 18px;
+        backdrop-filter: blur(20px) saturate(180%);
+        background: rgba(10, 21, 32, 0.85);
+        border: 0.5px solid rgba(255, 255, 255, 0.15);
+        border-radius: 24px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+    
+    .nav-dot {
+        width: 12px;
+        height: 12px;
+        margin: 4px 0;
+    }
+    
+    .nav-dot.active {
+        width: 14px;
+        height: 14px;
+    }
+    
+    /* ===== MOOD SWITCHER - BOTTOM LEFT ===== 
+       Left thumb zone, easy to reach */
+    .mood-switcher {
+        bottom: 24px;
+        left: 16px;
+        padding: 10px;
+        gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 140px;
+        backdrop-filter: blur(20px) saturate(180%);
+        background: rgba(10, 21, 32, 0.85);
+        border: 0.5px solid rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+    
+    .mood-dot {
+        width: 24px;
+        height: 24px;
+        border-width: 2px;
+    }
+    
+    /* ===== AUDIO TOGGLE - BOTTOM RIGHT ===== 
+       Right thumb zone */
+    .audio-toggle {
+        bottom: 24px;
+        right: 16px;
+        width: 52px;
+        height: 52px;
+        backdrop-filter: blur(20px) saturate(180%);
+        background: rgba(10, 21, 32, 0.85);
+        border: 0.5px solid rgba(255, 255, 255, 0.15);
+        border-radius: 26px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* ===== CARDS & GRIDS - MOBILE STACK ===== 
+       Full-width cards, easy to scan */
+    .symbol-grid,
+    .capability-areas,
+    .partnerships-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .symbol-item,
+    .capability-item,
+    .partnership-category {
+        width: 100%;
+        padding: 24px 20px;
+        border-radius: 16px;
+        /* Remove hover transforms on mobile - tap instead */
+        transform: none !important;
+    }
+    
+    /* Tap feedback instead of hover */
+    .symbol-item:active,
+    .capability-item:active,
+    .partnership-category:active {
+        transform: scale(0.98) !important;
+        opacity: 0.9;
+        transition: all 0.1s ease;
+    }
+    
+    /* ===== FORMS - MOBILE OPTIMIZED ===== 
+       Large, comfortable inputs */
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-input,
+    textarea {
+        font-size: 16px !important; /* Prevents iOS zoom */
+        padding: 16px 18px;
+        border-radius: 14px;
+        min-height: 52px;
+    }
+    
+    textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+    
+    /* Submit button - prominent */
+    #submitBtn {
+        width: 100%;
+        padding: 18px 32px;
+        font-size: 17px;
+        font-weight: 600;
+        border-radius: 14px;
+        margin-top: 12px;
+    }
+    
+    /* ===== MODAL - MOBILE FULLSCREEN ===== 
+       Like iOS sheets */
+    .legal-modal,
+    .frequency-modal {
+        padding: 0;
+    }
+    
+    .legal-modal-content,
+    .frequency-modal-content {
+        width: 100%;
+        max-width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        border-radius: 0;
+        animation: slideUpModal 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    @keyframes slideUpModal {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    /* Close button - top right, large */
+    .close-modal {
+        width: 44px;
+        height: 44px;
+        top: 16px;
+        right: 16px;
+        font-size: 32px;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(20px) saturate(180%);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Modal content - comfortable padding */
+    .modal-body {
+        padding: 80px 24px 40px;
+        max-height: 100vh;
+    }
+    
+    /* ===== PARTNERS LOGOS - MOBILE STACK ===== 
+       2-column grid on mobile */
+    .partners-logos-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .logo-placeholder {
+        width: 100%;
+        height: 70px;
+    }
+    
+    /* ===== FREQUENCY SYMBOLS - MOBILE GRID ===== 
+       2×2 grid for easy thumb reach */
+    .symbol-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .symbol-item {
+        padding: 20px 16px;
+    }
+    
+    .symbol-glyph svg {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .symbol-label {
+        font-size: 13px;
+        margin-top: 12px;
+    }
+    
+    /* ===== SAFE AREAS - NOTCH & HOME BAR ===== 
+       iPhone X+ compatibility */
+    .hero,
+    .section:first-of-type {
+        padding-top: max(60px, env(safe-area-inset-top));
+    }
+    
+    .anchor-menu {
+        top: max(20px, calc(env(safe-area-inset-top) + 8px));
+    }
+    
+    .mood-switcher,
+    .audio-toggle {
+        bottom: max(24px, calc(env(safe-area-inset-bottom) + 12px));
+    }
+    
+    /* ===== SCROLL BEHAVIOR - MOBILE SMOOTH ===== 
+       Native-feeling momentum */
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    html {
+        scroll-padding-top: 80px;
+    }
+    
+    /* ===== PULL TO REFRESH SPACING ===== 
+       Prevent awkward top bounce */
+    body {
+        overscroll-behavior-y: contain;
+    }
+    
+    /* ===== MOBILE TEXT SELECTION ===== 
+       Comfortable selection handles */
+    ::selection {
+        background: rgba(251, 191, 36, 0.3);
+        color: #ffffff;
+    }
+    
+    /* ===== MOBILE FOOTER - COMPACT ===== */
+    .footer {
+        padding: 48px 0 32px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    /* ===== LOADING SCREEN - MOBILE ===== 
+       Centered, comfortable size */
+    .frequency-loader {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .loader-text {
+        font-size: 18px;
+        margin-top: 24px;
+    }
+}
+
+/* ===== SMALL MOBILE (iPhone SE, etc.) ===== */
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 40px !important;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .anchor-menu {
+        padding: 8px 12px;
+        gap: 16px;
+    }
+    
+    .anchor-link {
+        font-size: 12px;
+    }
+    
+    .partners-logos-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .logo-placeholder {
+        height: 60px;
+    }
+}
+
+/* ===== LANDSCAPE MOBILE ===== 
+   Optimized for horizontal viewing */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 60px 24px 40px;
+    }
+    
+    .section {
+        padding: 48px 0;
+    }
+    
+    .anchor-menu {
+        top: 12px;
+        padding: 6px 12px;
+    }
+    
+    .nav-dots {
+        right: 12px;
+    }
+    
+    .mood-switcher,
+    .audio-toggle {
+        bottom: 16px;
+    }
+}
+
+/* ===== TABLET (iPad) OPTIMIZATION ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 17px;
+    }
+    
+    .content-container {
+        padding: 0 40px;
+    }
+    
+    .section {
+        padding: 100px 0;
+    }
+    
+    /* 3-column grids on tablet */
+    .symbol-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+    
+    .partners-logos-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    
+    /* Touch targets still important */
+    button,
+    .btn,
+    a,
+    .nav-dot {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* ===== HOVER CAPABILITY DETECTION ===== 
+   Only show hover effects on devices that support it */
+@media (hover: hover) and (pointer: fine) {
+    /* Desktop hover effects stay as defined */
+}
+
+@media (hover: none) and (pointer: coarse) {
+    /* Touch devices: use tap/active states instead */
+    .symbol-item:hover,
+    .capability-item:hover,
+    .partnership-category:hover {
+        transform: none;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Active (tap) feedback */
+    .symbol-item:active,
+    .capability-item:active,
+    .partnership-category:active {
+        transform: scale(0.97);
+        opacity: 0.9;
+    }
+}
+
+/* ===== DARK MODE SUPPORT (iOS/Android) ===== */
+@media (prefers-color-scheme: dark) {
+    /* Already dark, but ensure consistency */
+    body {
+        background: #0a1520;
+    }
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+    .form-input,
+    button,
+    .nav-dot,
+    .anchor-menu {
+        border-width: 2px;
+    }
+}
+
+/* ===== MOBILE PERFORMANCE ===== 
+   GPU acceleration for smooth animations */
+@media (max-width: 768px) {
+    .anchor-menu,
+    .nav-dots,
+    .mood-switcher,
+    .audio-toggle,
+    .symbol-item,
+    .capability-item {
+        will-change: transform;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+}
+
