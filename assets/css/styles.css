@@ -3620,3 +3620,94 @@ body {
 .partner-logo:nth-child(5) { animation-delay: 0.5s; }
 .partner-logo:nth-child(6) { animation-delay: 0.6s; }
 
+
+/* ===== UPDATED PARTNER LOGO PLACEHOLDERS ===== 
+   Free-floating, elegant, minimal */
+
+.partner-logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-placeholder {
+    width: 160px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(251, 191, 36, 0.15);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.logo-placeholder::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.08) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.partner-logo-item:hover .logo-placeholder::before {
+    opacity: 1;
+}
+
+.partner-logo-item:hover .logo-placeholder {
+    transform: translateY(-6px);
+    border-color: rgba(251, 191, 36, 0.3);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2),
+                0 0 40px rgba(251, 191, 36, 0.1);
+}
+
+.logo-text {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(251, 191, 36, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.partner-logo-item:hover .logo-text {
+    color: rgba(251, 191, 36, 0.7);
+    letter-spacing: 2px;
+}
+
+/* Remove old partner-logo styles */
+.partner-logo {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 968px) {
+    .logo-placeholder {
+        width: 140px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-placeholder {
+        width: 120px;
+        height: 60px;
+    }
+    
+    .logo-text {
+        font-size: 10px;
+    }
+}
+
