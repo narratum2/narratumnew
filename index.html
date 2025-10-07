@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    Narratum.io - Strategic Infrastructure for Transformative Hospitality
+    Version 3.0 - Enhanced with Premium Hospitality Magic
+    
+    SETUP INSTRUCTIONS:
+    1. Form Integration: Replace "YOUR_FORM_ID" with your Formspree ID (https://formspree.io)
+    2. Analytics: Add your Google Analytics ID if needed
+    3. Domain: Update all instances of "narratum.io" with your actual domain
+    4. Images: Add og-image.jpg and twitter-image.jpg to /assets/ folder
+    
+    FEATURES:
+    - Harmonic geometric animations in hero section
+    - Premium micro-interactions throughout
+    - Secure form with validation and animations
+    - Meditative ambient sound system
+    - Fully responsive with mobile-first approach
+    - Accessibility compliant
+    - SEO optimized
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Narratum | Strategic Infrastructure for Transformative Hospitality | NYC</title>
+    <meta name="description" content="Narratum transforms institutions through strategic hospitality infrastructure. We design experience systems, loyalty frameworks, and cultural programs that create lasting connections. Founded by Pascal Frey in NYC.">
+    <meta name="keywords" content="hospitality consulting, experience design, transformative hospitality, infrastructure strategy, loyalty systems, Pascal Frey, NYC, cultural programming, institutional transformation">
+    <meta name="author" content="Pascal Frey">
+    <link rel="canonical" href="https://narratum.io/">
+    
+    <!-- Mobile Web App Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Narratum">
+    <meta name="application-name" content="Narratum">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://narratum.io/">
+    <meta property="og:title" content="Narratum | Strategic Infrastructure for Transformative Hospitality">
+    <meta property="og:description" content="We build systems that transform how organizations connect with their communities. Strategic hospitality infrastructure for lasting impact.">
+    <meta property="og:image" content="https://narratum.io/assets/og-image.jpg">
+    <meta property="og:site_name" content="Narratum">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://narratum.io/">
+    <meta property="twitter:title" content="Narratum | Strategic Infrastructure for Transformative Hospitality">
+    <meta property="twitter:description" content="We build systems that transform how organizations connect with their communities. Strategic hospitality infrastructure for lasting impact.">
+    <meta property="twitter:image" content="https://narratum.io/assets/twitter-image.jpg">
+    <meta property="twitter:creator" content="@narratum_io">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="theme-color" content="#0a1520">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://formspree.io">
+    
+    <!-- Fonts with display swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+        /* Critical inline styles for faster initial paint */
+        body { margin: 0; background: #0a1520; color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .loading-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0a1520; display: flex; justify-content: center; align-items: center; z-index: 1000; }
+        .loader { text-align: center; }
+        @media (max-width: 768px) { .hero { padding-top: 100px; } }
+    </style>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Narratum",
+      "description": "Strategic infrastructure for transformative hospitality. We build systems that transform how organizations connect with their communities.",
+      "url": "https://narratum.io",
+      "logo": "https://narratum.io/favicon.svg",
+      "image": "https://narratum.io/assets/og-image.jpg",
+      "priceRange": "$$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "110 East 25th Street",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10010",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7128,
+        "longitude": -74.0060
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "connect@narratum.io",
+        "contactType": "Sales",
+        "availableLanguage": ["English"]
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Pascal Frey",
+        "jobTitle": "Founder & Strategic Director"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Global"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Hospitality Infrastructure Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Experience Strategy",
+              "description": "Hospitality vision development and journey mapping"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Spatial Design",
+              "description": "Environmental psychology and sensory environment design"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Digital Ecosystems",
+              "description": "Integrated platform development and personalization"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Organizational Transformation",
+              "description": "Culture development and operational systems design"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main" class="skip-link">Skip to content</a>
+    
+    <!-- Mouse Glow Effect -->
+    <div class="mouse-glow"></div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="frequency-loader">
+                <!-- Outer frequency ring -->
+                <circle cx="60" cy="60" r="55" stroke="currentColor" stroke-width="1" opacity="0.2" />
+                <!-- Middle frequency ring -->
+                <circle cx="60" cy="60" r="40" stroke="currentColor" stroke-width="1" opacity="0.3" />
+                <!-- Inner frequency ring -->
+                <circle cx="60" cy="60" r="25" stroke="currentColor" stroke-width="1" opacity="0.4" />
+                <!-- Core circle -->
+                <circle cx="60" cy="60" r="12" stroke="currentColor" stroke-width="2" stroke-dasharray="75" stroke-dashoffset="75" class="loader-core" />
+                <!-- Frequency dots -->
+                <circle cx="60" cy="5" r="2" fill="currentColor" class="freq-dot freq-dot-1" />
+                <circle cx="95" cy="30" r="2" fill="currentColor" class="freq-dot freq-dot-2" />
+                <circle cx="95" cy="90" r="2" fill="currentColor" class="freq-dot freq-dot-3" />
+                <circle cx="60" cy="115" r="2" fill="currentColor" class="freq-dot freq-dot-4" />
+                <circle cx="25" cy="90" r="2" fill="currentColor" class="freq-dot freq-dot-5" />
+                <circle cx="25" cy="30" r="2" fill="currentColor" class="freq-dot freq-dot-6" />
+                <!-- Connecting lines -->
+                <path d="M60 5 L95 30 L95 90 L60 115 L25 90 L25 30 Z" stroke="currentColor" stroke-width="0.5" opacity="0.3" class="freq-lines" />
+            </svg>
+            <span class="loader-text">narratum</span>
+        </div>
+    </div>
+    
+    <!-- Navigation Dots -->
+    <nav class="nav-dots" aria-label="Section navigation">
+        <button class="nav-dot active" data-section="hero" aria-label="Hero section">
+            <span class="dot-inner"></span>
+        </button>
+        <button class="nav-dot" data-section="infrastructure" aria-label="Infrastructure section">
+            <span class="dot-inner"></span>
+        </button>
+        <button class="nav-dot" data-section="approach" aria-label="Approach section">
+            <span class="dot-inner"></span>
+        </button>
+        <button class="nav-dot" data-section="capabilities" aria-label="Capabilities section">
+            <span class="dot-inner"></span>
+        </button>
+        <button class="nav-dot" data-section="loyalty" aria-label="Loyalty section">
+            <span class="dot-inner"></span>
+        </button>
+        <button class="nav-dot" data-section="partnerships" aria-label="Partnerships section">
+            <span class="dot-inner"></span>
+        </button>
+        <button class="nav-dot" data-section="contact" aria-label="Contact section">
+            <span class="dot-inner"></span>
+        </button>
+    </nav>
+    
+    <!-- Anchor Menu -->
+    <nav class="anchor-menu" aria-label="Section links">
+        <a href="#hero" class="anchor-link active" data-section="hero">Home</a>
+        <a href="#infrastructure" class="anchor-link" data-section="infrastructure">Infrastructure</a>
+        <a href="#approach" class="anchor-link" data-section="approach">Approach</a>
+        <a href="#capabilities" class="anchor-link" data-section="capabilities">Capabilities</a>
+        <a href="#loyalty" class="anchor-link" data-section="loyalty">Loyalty</a>
+        <a href="#partnerships" class="anchor-link" data-section="partnerships">Partnerships</a>
+        <a href="#contact" class="anchor-link" data-section="contact">Connect</a>
+    </nav>
+    
+    <!-- Audio Toggle -->
+    <button class="audio-toggle" data-state="inactive" aria-label="Toggle ambient sound">
+        <svg class="audio-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="1 3" />
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5" stroke-dasharray="1 2" />
+        </svg>
+    </button>
+    
+    <!-- Color Mood Switcher -->
+    <div class="mood-switcher">
+        <button class="mood-dot active" data-mood="default" aria-label="Default color theme"></button>
+        <button class="mood-dot" data-mood="teal" aria-label="Teal color theme"></button>
+        <button class="mood-dot" data-mood="purple" aria-label="Purple color theme"></button>
+        <button class="mood-dot" data-mood="gold" aria-label="Gold color theme"></button>
+        <button class="mood-dot" data-mood="nocturne" aria-label="Nocturne color theme"></button>
+        <button class="mood-dot" data-mood="botanical" aria-label="Botanical color theme"></button>
+    </div>
+    
+    <!-- Sound Visualization -->
+    <div class="sound-visualization">
+        <div class="sound-bar" style="left: 0%; height: 20%;"></div>
+        <div class="sound-bar" style="left: 20%; height: 40%;"></div>
+        <div class="sound-bar" style="left: 40%; height: 60%;"></div>
+        <div class="sound-bar" style="left: 60%; height: 40%;"></div>
+        <div class="sound-bar" style="left: 80%; height: 20%;"></div>
+    </div>
+    
+    <!-- Signal Particles -->
+    <div class="signal-particles"></div>
+    
+    <!-- Gold Line -->
+    <div class="gold-line"></div>
+    
+    <!-- Interactive Background -->
+    <div class="interactive-background">
+        <div class="cursor-follower"></div>
+    </div>
+    
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section -->
+        <section id="hero" class="section hero" data-section="hero">
+            <div class="constellation-background">
+                <div class="orbital-rings">
+                    <div class="orbital-ring ring-1"></div>
+                    <div class="orbital-ring ring-2"></div>
+                    <div class="orbital-ring ring-3"></div>
+                </div>
+                <div class="constellation-stars"></div>
+                <div class="constellation-lines"></div>
+                <div class="geometric-shapes">
+                    <div class="geo-shape diamond"></div>
+                    <div class="geo-shape square"></div>
+                    <div class="geo-shape triangle"></div>
+                </div>
+            </div>
+            
+            <div class="content-container">
+                <h1 class="site-title">NARRATUM</h1>
+                <p class="site-tagline">Strategic infrastructure for transformative hospitality.</p>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-line">
+                    <div class="scroll-drop"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Infrastructure Section -->
+        <section id="infrastructure" class="section infrastructure" data-section="infrastructure">
+            <div class="content-container">
+                <h2 class="section-title">Infrastructure, Not Service</h2>
+                <div class="prose">
+                    <p class="lead highlight-text">We build systems that transform how organizations connect with their communities.</p>
+                    <p class="highlight-text">In an era where every institution seeks differentiation, we recognize that true distinction comes not from surface-level service improvements, but from fundamental infrastructure transformation.</p>
+                    <p class="highlight-text">Every touchpoint is an opportunity. Every interaction, a potential catalyst. We design the underlying frameworks that turn moments into movements, visitors into advocates, and spaces into sanctuaries.</p>
+                    <p class="highlight-text">From arrival experiences that set emotional tone to digital ecosystems that extend engagement beyond physical boundaries, we architect the invisible systems that shape how people feel, connect, and remember.</p>
+                </div>
+                
+                <!-- What We Build integrated -->
+                <div class="build-pillars">
+                    <div class="build-pillar">
+                        <div class="pillar-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                                <circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                                <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Experiential Systems</h3>
+                        <p>Frameworks for sensory and emotional engagement across physical and digital touchpoints.</p>
+                    </div>
+                    
+                    <div class="build-pillar">
+                        <div class="pillar-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="8" y="8" width="32" height="32" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                <rect x="16" y="16" width="16" height="16" stroke="currentColor" stroke-width="1.5" opacity="0.5" fill="none"/>
+                                <rect x="22" y="22" width="4" height="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Cultural Infrastructure</h3>
+                        <p>Structures and programs that embed meaning, identity, and community into environments.</p>
+                    </div>
+                    
+                    <div class="build-pillar">
+                        <div class="pillar-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 4L40 14V34L24 44L8 34V14L24 4Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                <path d="M24 24L32 19V29L24 34L16 29V19L24 24Z" stroke="currentColor" stroke-width="1.5" opacity="0.5" fill="none"/>
+                                <circle cx="24" cy="24" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Technology & Intelligence</h3>
+                        <p>AI-powered systems, API integrations, and adaptive automation that scale personalized human experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Approach Section -->
+        <section id="approach" class="section approach" data-section="approach">
+            <div class="content-container">
+                <h2 class="section-title">Strategic Frequencies</h2>
+                <p class="intro-text highlight-text">We operate at the intersection of strategy and soul. Click each frequency to explore.</p>
+                
+                <div class="symbol-grid">
+                    <!-- Symbol 1: Strategy -->
+                    <div class="symbol-item lazy-load" data-symbol="strategy">
+                        <div class="symbol-glyph">
+                            <svg class="glyph-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="outer-ring" cx="60" cy="60" r="59" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                                <circle class="inner-ring" cx="60" cy="60" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+                                <path class="symbol-icon" d="M40 40L80 80M80 40L40 80" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <span class="symbol-label">Strategy</span>
+                        
+                        <div class="symbol-content">
+                            <h3>Strategic Vision</h3>
+                            <p>We align organizational purpose with transformative hospitality experiences, creating lasting impact through systematic innovation.</p>
+                            <p>Our strategic approach integrates cultural insights with operational excellence to build sustainable competitive advantages.</p>
+                            <ul>
+                                <li>Purpose-driven experience design</li>
+                                <li>Long-term value creation</li>
+                                <li>Stakeholder alignment</li>
+                                <li>Innovation frameworks</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Symbol 2: Systems -->
+                    <div class="symbol-item lazy-load" data-symbol="systems">
+                        <div class="symbol-glyph">
+                            <svg class="glyph-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="outer-ring" cx="60" cy="60" r="59" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                                <circle class="inner-ring" cx="60" cy="60" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+                                <rect class="symbol-icon" x="40" y="40" width="40" height="40" stroke="#FBBF24" stroke-width="2" fill="none" />
+                            </svg>
+                        </div>
+                        <span class="symbol-label">Systems</span>
+                        
+                        <div class="symbol-content">
+                            <h3>Systems Thinking</h3>
+                            <p>Designing holistic frameworks that connect all touchpoints into a coherent, meaningful journey that resonates at every level.</p>
+                            <p>We view hospitality as an interconnected ecosystem where each element reinforces and amplifies the whole experience.</p>
+                            <ul>
+                                <li>Cross-functional integration</li>
+                                <li>Feedback loop optimization</li>
+                                <li>Scalable process design</li>
+                                <li>Performance metrics alignment</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Symbol 3: Experience -->
+                    <div class="symbol-item lazy-load" data-symbol="experience">
+                        <div class="symbol-glyph">
+                            <svg class="glyph-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="outer-ring" cx="60" cy="60" r="59" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                                <circle class="inner-ring" cx="60" cy="60" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+                                <circle class="symbol-icon" cx="60" cy="60" r="25" stroke="#FBBF24" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <span class="symbol-label">Experience</span>
+                        
+                        <div class="symbol-content">
+                            <h3>Emotional Architecture</h3>
+                            <p>Crafting sensory environments that evoke specific emotional responses, creating memorable moments that transcend service.</p>
+                            <p>Every space, interaction, and touchpoint is deliberately designed to create lasting emotional connections.</p>
+                            <ul>
+                                <li>Sensory journey mapping</li>
+                                <li>Atmospheric design principles</li>
+                                <li>Behavioral psychology integration</li>
+                                <li>Memory creation techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Symbol 4: Legacy -->
+                    <div class="symbol-item lazy-load" data-symbol="legacy">
+                        <div class="symbol-glyph">
+                            <svg class="glyph-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="outer-ring" cx="60" cy="60" r="59" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                                <circle class="inner-ring" cx="60" cy="60" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+                                <path class="symbol-icon" d="M60 40 L75 70 L45 70 Z" stroke="#FBBF24" stroke-width="2" fill="none" />
+                            </svg>
+                        </div>
+                        <span class="symbol-label">Legacy</span>
+                        
+                        <div class="symbol-content">
+                            <h3>Cultural Resonance</h3>
+                            <p>Building lasting connections between institutions and communities through authentic engagement and shared values.</p>
+                            <p>We help organizations become cultural anchors that reflect and shape the communities they serve.</p>
+                            <ul>
+                                <li>Community co-creation</li>
+                                <li>Cultural narrative development</li>
+                                <li>Values-based programming</li>
+                                <li>Legacy building strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Capabilities Section -->
+        <section id="capabilities" class="section capabilities" data-section="capabilities">
+            <div class="content-container">
+                <h2 class="section-title">Core Capabilities</h2>
+                <p class="section-subtitle highlight-text">Transforming institutions through integrated expertise.</p>
+                
+                <div class="capabilities-grid">
+                    <!-- Capability 1 -->
+                    <div class="capability-block lazy-load" data-index="1">
+                        <span class="capability-number">01</span>
+                        <h3>Experience Strategy</h3>
+                        <ul>
+                            <li>Hospitality vision development</li>
+                            <li>Journey mapping and touchpoint design</li>
+                            <li>Service blueprint creation</li>
+                            <li>Cultural alignment assessment</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Capability 2 -->
+                    <div class="capability-block lazy-load" data-index="2">
+                        <span class="capability-number">02</span>
+                        <h3>Spatial Design</h3>
+                        <ul>
+                            <li>Arrival sequence optimization</li>
+                            <li>Wayfinding and navigation systems</li>
+                            <li>Environmental psychology application</li>
+                            <li>Sensory environment design</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Capability 3 -->
+                    <div class="capability-block lazy-load" data-index="3">
+                        <span class="capability-number">03</span>
+                        <h3>Digital Ecosystems</h3>
+                        <ul>
+                            <li>Integrated platform development</li>
+                            <li>AI-driven personalization engines</li>
+                            <li>API architecture and integrations</li>
+                            <li>Digital-physical connection points</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Capability 4 -->
+                    <div class="capability-block lazy-load" data-index="4">
+                        <span class="capability-number">04</span>
+                        <h3>Organizational Transformation</h3>
+                        <ul>
+                            <li>Culture development programs</li>
+                            <li>Staff training and enablement</li>
+                            <li>Operational systems design</li>
+                            <li>Measurement framework creation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Loyalty Systems Section -->
+        <section id="loyalty" class="section loyalty" data-section="loyalty">
+            <div class="content-container">
+                <h2 class="section-title">Loyalty Systems</h2>
+                <p class="section-subtitle highlight-text">Creating environments that inspire return and advocacy.</p>
+                
+                <div class="loyalty-journey">
+                    <div class="journey-path">
+                        <div class="journey-line"></div>
+                        
+                        <!-- Node 1 -->
+                        <div class="journey-node" data-node="1">
+                            <div class="node-dot"></div>
+                            <div class="node-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="4" y="4" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" />
+                                    <path d="M8 12H16M12 8V16" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="node-content">
+                                <h3>Experience Architecture</h3>
+                                <p>We design comprehensive experience frameworks that anticipate needs, exceed expectations, and create emotional connections that endure beyond the visit.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Node 2 -->
+                        <div class="journey-node" data-node="2">
+                            <div class="node-dot"></div>
+                            <div class="node-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="node-content">
+                                <h3>Cultural Programming</h3>
+                                <p>Our cultural initiatives transform spaces into dynamic environments where every interaction reinforces institutional values and community connection.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Node 3 -->
+                        <div class="journey-node" data-node="3">
+                            <div class="node-dot"></div>
+                            <div class="node-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 8L12 4L20 8V16L12 20L4 16V8Z" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="node-content">
+                                <h3>Digital Integration</h3>
+                                <p>We seamlessly blend physical and digital touchpoints, creating omnichannel experiences that extend relationships beyond traditional boundaries.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Node 4 -->
+                        <div class="journey-node" data-node="4">
+                            <div class="node-dot"></div>
+                            <div class="node-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L22 12L12 22L2 12L12 2Z" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="node-content">
+                                <h3>Community Cultivation</h3>
+                                <p>Our systems foster authentic communities where members become advocates, creating organic growth through genuine connection and shared purpose.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Loyalty closing statement with gold line -->
+                <div class="loyalty-statement">
+                    <p>From cultural institutions seeking deeper <span class="highlight-word">patron relationships</span> to corporate environments building internal culture, our loyalty systems become the invisible infrastructure that turns visitors into <span class="highlight-word">members</span>, customers into <span class="highlight-word">advocates</span>, and employees into <span class="highlight-word">ambassadors</span>.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Partnerships Section -->
+        <section id="partnerships" class="section partnerships" data-section="partnerships">
+            <div class="content-container">
+                <h2 class="section-title">Trusted Partnerships</h2>
+                <p class="section-subtitle highlight-text">Transforming institutions across sectors.</p>
+                
+                <div class="partnerships-grid">
+                    <!-- Educational Excellence -->
+                    <div class="partnership-category">
+                        <h3>Educational Excellence</h3>
+                        <p>Leading universities and educational institutions reimagining campus experiences and digital <span class="highlight-word">engagement</span>.</p>
+                        <div class="partnership-stats">
+                            <div class="stat">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Institutions</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">500K+</span>
+                                <span class="stat-label">Lives Touched</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cultural Venues -->
+                    <div class="partnership-category">
+                        <h3>Cultural Venues</h3>
+                        <p>Museums, galleries, and performance spaces creating deeper audience connections.</p>
+                        <div class="partnership-stats">
+                            <div class="stat">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Major Venues</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">2M+</span>
+                                <span class="stat-label">Annual Visitors</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Corporate Campuses -->
+                    <div class="partnership-category">
+                        <h3>Corporate Campuses</h3>
+                        <p>Fortune 500 companies transforming workplace culture and employee experience.</p>
+                        <div class="partnership-stats">
+                            <div class="stat">
+                                <span class="stat-number">15</span>
+                                <span class="stat-label">Enterprises</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100K+</span>
+                                <span class="stat-label">Employees</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hospitality Leaders -->
+                    <div class="partnership-category">
+                        <h3>Hospitality Leaders</h3>
+                        <p>Premier hotels and resorts elevating guest experiences through integrated infrastructure design.</p>
+                        <div class="partnership-stats">
+                            <div class="stat">
+                                <span class="stat-number">600+</span>
+                                <span class="stat-label">Hotels</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">4</span>
+                                <span class="stat-label">Campuses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-quote">
+                    <blockquote>
+                        "Narratum didn't just improve our operations—they fundamentally transformed how we think about <span class="highlight-word">hospitality</span>. Their infrastructure approach created systems that continuously evolve with our guests' needs."
+                    </blockquote>
+                    <cite>— Chief Experience Officer, International Hospitality Group</cite>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section contact" data-section="contact">
+            <div class="content-container">
+                <h2 class="section-title">Connect</h2>
+                
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <p class="highlight-text">Ready to transform your institution's infrastructure? Let's explore how strategic hospitality can elevate your mission.</p>
+                        <div class="contact-email">
+                            <a href="mailto:connect@narratum.io">connect@narratum.io</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 
+                    IMPORTANT: Form Setup Instructions
+                    1. Sign up for a free account at https://formspree.io
+                    2. Create a new form and get your form ID
+                    3. Replace "YOUR_FORM_ID" in the action URL below with your actual form ID
+                    4. Create a /thank-you.html page for the redirect or remove the _next input
+                    5. The form will then be fully functional and secure
+                    
+                    SECURITY FEATURES:
+                    - Honeypot spam protection (_gotcha field)
+                    - Client-side validation
+                    - Secure Formspree backend
+                    - Rate limiting (via Formspree)
+                    -->
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <!-- Security: CSRF token placeholder -->
+                        <input type="hidden" name="_subject" value="New Narratum Inquiry">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-input" id="name" name="name" placeholder="Name" required 
+                                       pattern="[A-Za-z\s]{2,50}" 
+                                       title="Please enter a valid name (2-50 characters, letters only)"
+                                       autocomplete="name">
+                                <label for="name" class="form-label">Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-input" id="email" name="email" placeholder="Email" required
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                       title="Please enter a valid email address"
+                                       autocomplete="email">
+                                <label for="email" class="form-label">Email</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="organization" name="organization" placeholder="Organization"
+                                   pattern="[A-Za-z0-9\s\-\.&]{2,100}"
+                                   title="Please enter a valid organization name"
+                                   autocomplete="organization">
+                            <label for="organization" class="form-label">Organization</label>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-input form-select" id="sector" name="sector" required>
+                                <option value="" disabled selected>Select your sector</option>
+                                <option value="education">Education</option>
+                                <option value="cultural">Cultural Institution</option>
+                                <option value="corporate">Corporate</option>
+                                <option value="hospitality">Hospitality</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label for="sector" class="form-label">Sector</label>
+                            <div class="select-arrow">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-textarea" id="message" name="message" placeholder="Message" required
+                                      minlength="10" maxlength="1000"
+                                      title="Please enter your message (10-1000 characters)"></textarea>
+                            <label for="message" class="form-label">Message</label>
+                            <span class="character-count" id="charCount">0 / 1000</span>
+                        </div>
+                        <!-- Honeypot field for spam protection -->
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                        <!-- Time-based validation -->
+                        <input type="hidden" name="_formSubmittedAt" id="formSubmittedAt">
+                        <!-- Success redirect - create a /thank-you page or remove this line -->
+                        <input type="hidden" name="_next" value="https://narratum.io/thank-you">
+                        <!-- Disable captcha if using Formspree's built-in -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <button type="submit" class="submit-button" id="submitBtn">
+                            <span class="button-text">Begin Transformation</span>
+                            <span class="button-loading">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="30" stroke-dashoffset="30" class="spinner-circle"/>
+                                </svg>
+                            </span>
+                        </button>
+                    </form>
+                    
+                    <!-- Founder statement as floating paragraph -->
+                    <div class="founder-statement">
+                        <p><strong>NARRATUM</strong> was founded by Pascal Frey, a strategist working at the intersection of hospitality, design, and technology. With a background in curating elevated guest experiences and building cultural ecosystems, Pascal created Narratum to help future-facing organizations craft infrastructure that is both human-centered and transformative.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-brand">NARRATUM</div>
+                <div class="footer-address">
+                    <div class="address-line">110 East 25th Street</div>
+                    <div class="address-line">New York City</div>
+                </div>
+            </div>
+            
+            <div class="footer-center">
+                <a href="mailto:connect@narratum.io" class="footer-email">connect@narratum.io</a>
+                
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="https://instagram.com/narratum_io" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/narratum_io" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4L10 10M10 10L4 20M10 10L20 4M10 10L20 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="#" class="footer-link" onclick="openLegalModal('privacy')">Privacy</a>
+                    <a href="#" class="footer-link" onclick="openLegalModal('terms')">Terms</a>
+                    <a href="#" class="footer-link" onclick="openLegalModal('cookies')">Cookies</a>
+                </div>
+                <div class="footer-copyright">© 2025 Narratum LLC</div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="cookie-actions">
+                <button class="cookie-button accept" onclick="acceptCookies()">Accept</button>
+                <button class="cookie-button settings" onclick="openLegalModal('cookies')">Cookie Settings</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Legal Modal -->
+    <div id="legalModal" class="legal-modal">
+        <div class="legal-modal-content">
+            <button class="close-modal" onclick="closeLegalModal()">&times;</button>
+            <div id="modalContent" class="modal-body"></div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="legal-content.js"></script>
+</body>
+</html>

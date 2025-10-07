@@ -1,0 +1,23 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100" height="100" fill="#0a1520"/>
+  
+  <!-- Outer ring -->
+  <circle cx="50" cy="50" r="40" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Inner ring -->
+  <circle cx="50" cy="50" r="30" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Center N monogram -->
+  <g transform="translate(50, 50)">
+    <!-- N shape with premium geometry -->
+    <path d="M -15 15 L -15 -15 L -10 -15 L 10 10 L 10 -15 L 15 -15 L 15 15 L 10 15 L -10 -10 L -10 15 Z" 
+          fill="#fbbf24"/>
+  </g>
+  
+  <!-- Accent dots -->
+  <circle cx="20" cy="20" r="1.5" fill="#7dd3fc" opacity="0.6"/>
+  <circle cx="80" cy="20" r="1.5" fill="#7dd3fc" opacity="0.6"/>
+  <circle cx="20" cy="80" r="1.5" fill="#7dd3fc" opacity="0.6"/>
+  <circle cx="80" cy="80" r="1.5" fill="#7dd3fc" opacity="0.6"/>
+</svg>
