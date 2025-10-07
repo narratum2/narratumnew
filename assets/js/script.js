@@ -1047,6 +1047,12 @@ function initializeColorMoodSwitcher() {
             '--bg-secondary': '#0a2420',
             '--accent-gold': '#d4a574',
             '--accent-cyan': '#0f766e'
+        },
+        holographic: {
+            '--bg-primary': '#0a1218',
+            '--bg-secondary': '#0d1820',
+            '--accent-gold': '#fbbf24',
+            '--accent-cyan': '#10b981'
         }
     };
     
@@ -1063,6 +1069,20 @@ function initializeColorMoodSwitcher() {
                 Object.entries(themes[mood]).forEach(([property, value]) => {
                     root.style.setProperty(property, value);
                 });
+                
+                // Special holographic effect
+                const holographicLayer = document.querySelector('.holographic-stars');
+                if (mood === 'holographic') {
+                    if (holographicLayer) {
+                        holographicLayer.style.display = 'block';
+                        initializeHolographicStars();
+                    }
+                } else {
+                    if (holographicLayer) {
+                        holographicLayer.style.display = 'none';
+                        stopHolographicStars();
+                    }
+                }
                 
                 // Save preference
                 localStorage.setItem('preferredMood', mood);
@@ -1452,3 +1472,112 @@ window.narratum = {
     closeModal: closeLegalModal,
     acceptCookies: acceptCookies
 };
+// Holographic Stars Animation (Special Effect)
+let holographicAnimationFrame;
+let holographicStars = [];
+let holographicCanvas;
+let holographicCtx;
+
+function initializeHolographicStars() {
+    holographicCanvas = document.getElementById('holographicCanvas');
+    if (!holographicCanvas) return;
+    
+    holographicCtx = holographicCanvas.getContext('2d');
+    
+    // Set canvas size
+    resizeHolographicCanvas();
+    window.addEventListener('resize', resizeHolographicCanvas);
+    
+    // Create stars
+    createHolographicStars();
+    
+    // Start animation
+    animateHolographicStars();
+}
+
+function resizeHolographicCanvas() {
+    if (!holographicCanvas) return;
+    holographicCanvas.width = window.innerWidth;
+    holographicCanvas.height = window.innerHeight;
+}
+
+function createHolographicStars() {
+    holographicStars = [];
+    const starCount = 60; // 60 stars
+    
+    for (let i = 0; i < starCount; i++) {
+        holographicStars.push({
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
+            size: Math.random() * 3 + 1,
+            speedX: (Math.random() - 0.5) * 0.3,
+            speedY: (Math.random() - 0.5) * 0.3,
+            color: Math.random() > 0.5 ? 'green' : 'gold',
+            opacity: Math.random() * 0.5 + 0.3,
+            twinkleSpeed: Math.random() * 0.02 + 0.01,
+            phase: Math.random() * Math.PI * 2
+        });
+    }
+}
+
+function animateHolographicStars() {
+    if (!holographicCtx || !holographicCanvas) return;
+    
+    // Clear canvas
+    holographicCtx.clearRect(0, 0, holographicCanvas.width, holographicCanvas.height);
+    
+    // Update and draw stars
+    holographicStars.forEach(star => {
+        // Update position
+        star.x += star.speedX;
+        star.y += star.speedY;
+        
+        // Wrap around edges
+        if (star.x < 0) star.x = holographicCanvas.width;
+        if (star.x > holographicCanvas.width) star.x = 0;
+        if (star.y < 0) star.y = holographicCanvas.height;
+        if (star.y > holographicCanvas.height) star.y = 0;
+        
+        // Update twinkle
+        star.phase += star.twinkleSpeed;
+        const twinkle = Math.sin(star.phase) * 0.3 + 0.7;
+        
+        // Set color
+        if (star.color === 'green') {
+            holographicCtx.fillStyle = `rgba(16, 185, 129, ${star.opacity * twinkle})`;
+            holographicCtx.shadowColor = 'rgba(16, 185, 129, 0.5)';
+        } else {
+            holographicCtx.fillStyle = `rgba(251, 191, 36, ${star.opacity * twinkle})`;
+            holographicCtx.shadowColor = 'rgba(251, 191, 36, 0.5)';
+        }
+        holographicCtx.shadowBlur = star.size * 3;
+        
+        // Draw star
+        holographicCtx.beginPath();
+        holographicCtx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        holographicCtx.fill();
+        
+        // Occasional highlight
+        if (Math.random() > 0.995) {
+            holographicCtx.shadowBlur = star.size * 8;
+            holographicCtx.globalAlpha = 0.8;
+            holographicCtx.beginPath();
+            holographicCtx.arc(star.x, star.y, star.size * 2, 0, Math.PI * 2);
+            holographicCtx.fill();
+            holographicCtx.globalAlpha = 1;
+        }
+    });
+    
+    // Continue animation
+    holographicAnimationFrame = requestAnimationFrame(animateHolographicStars);
+}
+
+function stopHolographicStars() {
+    if (holographicAnimationFrame) {
+        cancelAnimationFrame(holographicAnimationFrame);
+        holographicAnimationFrame = null;
+    }
+    if (holographicCtx && holographicCanvas) {
+        holographicCtx.clearRect(0, 0, holographicCanvas.width, holographicCanvas.height);
+    }
+}
