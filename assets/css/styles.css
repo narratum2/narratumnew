@@ -4888,3 +4888,66 @@ body {
     animation: welcomePulse 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+
+/* ========================================
+   REMOVE GREY BOXES - Clean Floating Design
+   ======================================== */
+
+/* Remove visible borders from card elements */
+.capability-item,
+.symbol-item,
+.partnership-category,
+.build-pillar {
+    border: none !important;
+}
+
+/* Remove borders from geometric shapes */
+.geo-shape {
+    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Cleaner partner logos */
+.partner-logo-item {
+    border: none !important;
+}
+
+/* Remove any other grey boxes */
+.capability-block,
+.approach-block {
+    border: none !important;
+}
+
+/* Keep only shadow for depth, no borders */
+.capability-item,
+.symbol-item,
+.partnership-category,
+.build-pillar {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Make mood switcher (color picker) less prominent */
+.mood-switcher {
+    opacity: 0.3 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.mood-switcher:hover {
+    opacity: 1 !important;
+}
+
+.mood-dot {
+    width: 12px !important;
+    height: 12px !important;
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mood-dot:hover {
+    opacity: 1;
+}
+
+.mood-dot.active {
+    opacity: 1;
+}
+
