@@ -3711,3 +3711,392 @@ body {
     }
 }
 
+/* ========================================
+   HOSPITALITY-FOCUSED UX/UI ENHANCEMENTS
+   Award-Winning Design Refinements
+   ======================================== */
+
+/* ===== ACCESSIBILITY: Screen Reader Only ===== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ===== REFINED TYPOGRAPHY SCALE ===== 
+   Like perfectly curated hotel stationery */
+:root {
+    /* Enhanced type scale for better hierarchy */
+    --font-size-xs: 13px;
+    --font-size-sm: 15px;
+    --font-size-base: 17px;
+    --font-size-lg: 20px;
+    --font-size-xl: 24px;
+    --font-size-2xl: 32px;
+    --font-size-3xl: 42px;
+    --font-size-4xl: 56px;
+    --font-size-5xl: 72px;
+    
+    /* Refined line heights - breathing room */
+    --line-height-tight: 1.2;
+    --line-height-snug: 1.4;
+    --line-height-normal: 1.6;
+    --line-height-relaxed: 1.75;
+    --line-height-loose: 2;
+    
+    /* Letter spacing for elegance */
+    --tracking-tighter: -0.02em;
+    --tracking-tight: -0.01em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.02em;
+    --tracking-wider: 0.05em;
+    --tracking-widest: 0.1em;
+    
+    /* Refined timing - smooth like concierge service */
+    --transition-instant: 150ms;
+    --transition-fast: 250ms;
+    --transition-base: 350ms;
+    --transition-slow: 500ms;
+    --transition-slower: 750ms;
+    
+    /* Easing functions - natural, welcoming movement */
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0.0, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ===== ENHANCED SECTION SPACING ===== 
+   Like the perfect distance between courses */
+.section {
+    padding: 140px 0;
+    scroll-margin-top: 80px; /* Smooth anchor offset */
+}
+
+.section:first-of-type {
+    padding-top: 0;
+}
+
+/* ===== REFINED CONTENT CONTAINERS ===== 
+   Proper margins, like table settings */
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(24px, 5vw, 80px);
+}
+
+/* ===== ENHANCED SECTION TITLES ===== 
+   Like elegant menu headers */
+.section-title {
+    font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-4xl));
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--tracking-tighter);
+    margin-bottom: 24px;
+    font-weight: 300;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent-gold) 0%, transparent 100%);
+    opacity: 0.5;
+}
+
+/* ===== REFINED SECTION SUBTITLES ===== */
+.section-subtitle {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    letter-spacing: var(--tracking-wide);
+    margin-bottom: 60px;
+    opacity: 0.85;
+}
+
+/* ===== ENHANCED HIGHLIGHT TEXT ===== 
+   Like gold-leaf details */
+.highlight-text {
+    color: var(--accent-gold);
+    font-style: italic;
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+}
+
+.highlight-word {
+    color: var(--accent-gold);
+    font-style: italic;
+    position: relative;
+    transition: all var(--transition-base) var(--ease-smooth);
+    padding: 0 2px;
+}
+
+.highlight-word:hover {
+    letter-spacing: 0.05em;
+}
+
+/* ===== REFINED BUTTON INTERACTIONS ===== 
+   Like pressing a perfectly weighted doorbell */
+button, .btn, input[type="submit"] {
+    transition: all var(--transition-base) var(--ease-in-out);
+    transform-origin: center;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(251, 191, 36, 0.2);
+}
+
+button:active, .btn:active {
+    transform: translateY(0px);
+    transition-duration: var(--transition-instant);
+}
+
+/* ===== ENHANCED LINK INTERACTIONS ===== 
+   Subtle, inviting */
+a {
+    transition: all var(--transition-fast) var(--ease-smooth);
+    position: relative;
+}
+
+a:not(.btn):hover {
+    letter-spacing: 0.02em;
+}
+
+/* ===== REFINED ANCHOR MENU ===== 
+   Like a discreet concierge button */
+.anchor-menu {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(251, 191, 36, 0.1);
+    transition: all var(--transition-base) var(--ease-in-out);
+}
+
+.anchor-menu:hover {
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(251, 191, 36, 0.2);
+    transform: translateX(-50%) translateY(-2px) !important;
+}
+
+.anchor-link {
+    padding: 8px 0;
+    position: relative;
+    transition: all var(--transition-fast) var(--ease-smooth);
+}
+
+.anchor-link::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent-gold);
+    transition: width var(--transition-base) var(--ease-out);
+}
+
+.anchor-link:hover::after,
+.anchor-link.active::after {
+    width: 100%;
+}
+
+/* ===== ENHANCED NAV DOTS ===== 
+   Like floor indicators in an elevator */
+.nav-dots {
+    padding: 16px 12px;
+    gap: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(251, 191, 36, 0.08);
+    transition: all var(--transition-base) var(--ease-smooth);
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    transition: all var(--transition-base) var(--ease-bounce);
+    position: relative;
+}
+
+.nav-dot::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(251, 191, 36, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all var(--transition-base) var(--ease-out);
+}
+
+.nav-dot:hover::before {
+    width: 28px;
+    height: 28px;
+}
+
+.nav-dot.active {
+    transform: scale(1.3);
+}
+
+/* ===== REFINED FORM INPUTS ===== 
+   Like signing a guest book */
+.form-input {
+    transition: all var(--transition-base) var(--ease-smooth);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+}
+
+.form-input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(251, 191, 36, 0.15),
+                0 0 0 2px rgba(251, 191, 36, 0.3);
+}
+
+.form-input:hover:not(:focus) {
+    border-color: rgba(251, 191, 36, 0.4);
+}
+
+/* ===== ENHANCED CARDS & CONTAINERS ===== 
+   Like placing items on a marble counter */
+.capability-item,
+.partnership-category,
+.partner-logo {
+    transition: all var(--transition-base) var(--ease-in-out);
+    will-change: transform;
+}
+
+.capability-item:hover,
+.partnership-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(251, 191, 36, 0.1);
+}
+
+/* ===== REFINED SCROLL BEHAVIOR ===== 
+   Smooth like gliding on marble */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===== ENHANCED LOADING STATES ===== 
+   Anticipation, like waiting for a door to open */
+.loading-screen {
+    transition: opacity var(--transition-slower) var(--ease-out),
+                visibility var(--transition-slower) var(--ease-out);
+}
+
+/* ===== REFINED GOLD LINE ===== 
+   Like a subtle gilded edge */
+.gold-line {
+    opacity: 0.6;
+    transition: opacity var(--transition-base) var(--ease-smooth);
+}
+
+body.scrolled .gold-line {
+    opacity: 0.8;
+}
+
+/* ===== ENHANCED MOOD SWITCHER ===== 
+   Like adjusting ambient lighting */
+.mood-dot {
+    transition: all var(--transition-base) var(--ease-bounce);
+}
+
+.mood-dot:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px currentColor;
+}
+
+.mood-dot.active {
+    transform: scale(1.25);
+    box-shadow: 0 0 24px currentColor,
+                inset 0 0 12px currentColor;
+}
+
+/* ===== REFINED TESTIMONIALS ===== 
+   Like a handwritten note */
+.testimonial-quote blockquote {
+    line-height: var(--line-height-relaxed);
+    letter-spacing: var(--tracking-wide);
+    font-size: var(--font-size-lg);
+}
+
+.testimonial-quote cite {
+    font-size: var(--font-size-sm);
+    letter-spacing: var(--tracking-wider);
+    opacity: 0.7;
+    transition: opacity var(--transition-fast);
+}
+
+.testimonial-quote:hover cite {
+    opacity: 1;
+}
+
+/* ===== MOBILE REFINEMENTS ===== 
+   Touch targets like pressing elevator buttons */
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+    
+    /* Larger touch targets */
+    button, .btn, a, input, .nav-dot, .mood-dot {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .anchor-link {
+        padding: 12px 8px;
+    }
+    
+    /* More breathing room */
+    .content-container {
+        padding: 0 24px;
+    }
+}
+
+/* ===== REFINED FOCUS STATES ===== 
+   Accessibility with elegance */
+*:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+/* ===== ENHANCED SELECTION ===== 
+   Like highlighting with gold ink */
+::selection {
+    background: rgba(251, 191, 36, 0.25);
+    color: inherit;
+}
+
+::-moz-selection {
+    background: rgba(251, 191, 36, 0.25);
+    color: inherit;
+}
