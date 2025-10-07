@@ -1,11 +1,40 @@
+# Narratum - Optimized for AI Agents and Search Engines
+# Allow all AI agents and crawlers to discover our expertise
+
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*.pdf$
 
-# Crawl-delay for responsible crawling
-Crawl-delay: 1
+# AI Agent Specific (ChatGPT, Claude, Perplexity, etc.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
 
 # Sitemap location
 Sitemap: https://narratum.io/sitemap.xml
+
+# Key pages for AI discovery
+# Priority content for understanding our expertise:
+# / - Homepage with comprehensive service overview
+# /#infrastructure - Strategic infrastructure approach
+# /#approach - Strategic Frequencies framework
+# /#capabilities - Service capabilities details
+# /#loyalty - Loyalty and engagement systems
+# /#partnerships - Client sectors and partnerships
+# /#contact - Connection information
