@@ -1,1 +1,20 @@
+# dependencies
+node_modules/
+
+# env files
+.env
+.env.*
+.env*.local
+
+# next.js
+/.next/
+/out/
+
+# project instructions (may contain tokens)
+CLAUDE.md
+
+# misc
+.DS_Store
+
+# vercel
 .vercel
